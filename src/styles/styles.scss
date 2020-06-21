@@ -163,3 +163,182 @@ header{
 
     }
 }
+
+//about blurb
+
+.about-blurb{
+    position: relative;
+    background: $white;
+    padding:48px 0;
+ 
+    .inner-blurb{
+        
+            display: flex;
+            width:100%;
+            height: 100vh;
+            justify-content: space-between;
+            align-items: center;
+        .content{
+            width:33%;
+            h3{
+                font-weight: 700;
+                text-transform:uppercase;
+                font-size: 1.8rem;
+                letter-spacing: 1.5px;
+                margin:0;
+            }
+
+            p{
+                line-height: 2rem;
+                font-size: 1rem;
+                font-weight: 300;
+
+            }
+
+            .btn-row{
+                a{
+                    font-weight: 700;
+                    font-size: .8rem;
+                    letter-spacing: 1.5px;
+                    color:$black;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .images{
+            width:50%;
+            position: relative;
+            height: 100%;
+          
+
+            .blurb-img{
+                position: absolute;
+                width:360px;
+                z-index:5;
+                
+                &.right{
+                top:0;
+                right:0;
+                }
+
+                &.left{
+                    bottom:0;
+                    left:0;
+                }
+                
+            }
+
+            
+        }
+    }
+
+    .black-box{
+        position: absolute;
+        width: 700px;
+        height: 300px;
+        top:37%;
+        right:0;
+        z-index:4;
+        background: $black;
+        &.overlay{
+            background: $maroon;
+            z-index:6;
+            mix-blend-mode: overlay;
+        }
+    }
+}
+
+
+//video
+
+.video-section{
+    width:100%;
+    
+   
+    .video-inner{
+        width:100%;
+        .video-player{
+            width:100%;
+            height: 70vh;
+            
+            video{
+                width:100%;
+                height: 100%;
+            }
+        }
+
+        .video-content{
+            display:flex;
+            align-items: center;
+            margin: 80px 0 120px;
+            .title{
+                width:50%;
+                    h3{
+                        font-weight: 700;
+                        text-transform: uppercase;
+                        font-size: 1.8rem;
+                        letter-spacing: 1.5px;
+                        margin: 0;
+                    }
+            }
+
+            .video-content-info{
+                width: 50%;
+                p{
+                    font-size: 1rem;
+          line-height: 2rem;
+          font-weight: 300;
+          margin: 0;
+                }
+            }
+        }
+    }
+}
+
+
+.footer{
+    width:100%;
+    .footer-inner{
+        width:100%;
+        .footer-brands{
+            display: flex;
+            width:100%;
+            .brand{
+                width:25%;
+                height: 20vh;
+                display: flex;
+                background: $black;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width:30%
+                }
+            }
+        }
+
+        .footer-social{
+            display: flex;
+            height: 10vh;
+            justify-content: center;
+            align-items: center;
+
+            span{
+                width:33%;
+                text-align: center;
+                
+            }
+
+            .socials{
+                width:33%;
+                display:flex;
+                justify-content: center;
+                a{
+                    padding:1rem;
+                    
+                }
+            }
+        }
+    }
+}
