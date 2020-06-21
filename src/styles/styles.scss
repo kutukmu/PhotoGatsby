@@ -20,15 +20,10 @@ html,body{
 }
 
 .container{
-    width:1640px;
+    width:1440px;
  
-    min-width: 1640px;
+    min-width: 1440px;
     margin:0 auto;
-    @media (max-width:1440px){
-        width:1280px;
-        min-width: 1280px;
-    }
-
     @media (max-width:1280px){
         width:976px;
         min-width: 976px;
@@ -90,9 +85,10 @@ header{
     height: 100vh;
     .row{
         position: relative;
+        
 
         .main-text{
-            font-size: 5.8rem;
+            font-size: 4.4rem;
             text-transform: uppercase;
             letter-spacing: 42px;
             font-weight: 700;
@@ -111,5 +107,59 @@ header{
                  letter-spacing: 36px;
              }
         }
+
+        .side-image{
+
+            width:200px;
+            position: absolute;
+            
+            &.left{
+                top:12%;
+                left:100px;
+                
+            }
+
+            &.right {
+                bottom:12%;
+                right:100px;
+            }
+
+        }
+
+
+        .main-image{
+            width:480px;
+            margin:0 auto;
+            @media(max-width:1440px){
+                width: 430px;
+            }
+           
+        }
+
+        
+    }
+
+    .scroll{
+        font-weight: 700;
+        font-size: .9rem;
+        letter-spacing: 1.5px;
+        color:$black;
+        position: absolute;
+        bottom:48px;
+        text-transform: uppercase;
+    }
+
+    .fixed-misc{
+        font-weight: 700;
+        position: fixed;
+        top:50%;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        color:$white;
+        mix-blend-mode: difference;
+        z-index:8;
+        right:-110px;
+        transform: rotate(90deg) ;
+
     }
 }
