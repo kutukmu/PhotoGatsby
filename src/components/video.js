@@ -1,6 +1,30 @@
-import React from "react"
+import React, { useRef, useEffect } from "react"
+import gsap from "gsap"
 
 const Video = () => {
+
+
+    let h3 = useRef(null);
+    let p = useRef(null)
+
+
+    useEffect(() => {
+        gsap.from(h3, {
+            duration: 1,
+            x: -50,
+            opacity: 0
+        })
+
+        gsap.from(p, {
+            duration: 1,
+            x: 60,
+            opacity: 0
+        })
+
+
+
+    })
+
 
 
     return (
@@ -24,10 +48,10 @@ const Video = () => {
                     </div>
                     <div className="video-content">
                         <div className="title">
-                            <h3>Let’s Talk About It Now</h3>
+                            <h3 ref={el => h3 = el}>Let’s Talk About It Now</h3>
                         </div>
                         <div className="video-content-info">
-                            <p>
+                            <p ref={el => p = el}>
                                 I’m so happy to present the 1st trailer of the film. “Let’s Talk
                                 About It Now” is a film that focuses on Mental health in the
                                 African community, and the black race as a whole, as this is a

@@ -170,7 +170,7 @@ header{
     position: relative;
     background: $white;
     padding:48px 0;
- 
+    border:1px solid red;
     .inner-blurb{
         
             display: flex;
@@ -186,6 +186,7 @@ header{
                 font-size: 1.8rem;
                 letter-spacing: 1.5px;
                 margin:0;
+                
             }
 
             p{
@@ -196,11 +197,35 @@ header{
             }
 
             .btn-row{
+                position:relative;
+                width:150px;
+                height: 50px;
+                margin-top:1rem;
+                .btn-overlay{
+                    width:150px;
+                    height: 50px;
+                    background-color: white;
+                    position: absolute;
+                    top:0;
+                    left:0;
+                    z-index:5;
+                    opacity: 1;
+                    
+                }
                 a{
+                  
+                position: relative;
+                z-index:4;
+                    padding-top:.8rem;
+                   text-align: center;
+                    width:100%;
+                    height: 100%;
+                    display: block;
                     font-weight: 700;
                     font-size: .8rem;
                     letter-spacing: 1.5px;
-                    color:$black;
+                    color:$white;
+                    background: $black;
                     text-transform: uppercase;
                     text-decoration: none;
                 }

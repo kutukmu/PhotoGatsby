@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react"
+import { useIntersection } from "react-use"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Img from "gatsby-image";
@@ -34,6 +35,7 @@ const Banner = () => {
     let main = useRef(null)
     let left = useRef(null)
     let right = useRef(null)
+
 
 
     useEffect(() => {
